@@ -2,19 +2,19 @@ import { Fragment } from "react";
 import mealsImage from '../../assets/meals.jpg'
 import HeaderCartButton from "../Cart/HeaderCartButton";
 import classes from './Header.module.css';
-const Header = () => {
+const Header = (props) => {
 
-    return(
-    <Fragment>
+    return (
+      <Fragment>
         <header className={classes.header}>
-            <h1>ReactMeals</h1>
-            <HeaderCartButton/>
+          <h1>ReactMeals</h1>
+          <HeaderCartButton onClick={props.onShowCart} />
         </header>
-        <div className={classes['main-image']}>
-            <img src={mealsImage} alt="A table full of food"/>
+        <div className={classes["main-image"]}>
+          <img src={mealsImage} alt="A table full of food" />
         </div>
-    </Fragment>
-    )
+      </Fragment>
+    );
 }
 
 export default Header;
