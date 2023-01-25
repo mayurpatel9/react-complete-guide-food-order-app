@@ -36,7 +36,7 @@ const CartProvider = (props) =>{
     const [cartState, dispatchCartAction] = useReducer(cartReducer, defaultCartState);
 
     const cartContext = {
-      item: cartState.items,
+      items: cartState.items,
       totalAmount: cartState.totalAmount,
       addItem: addItemToCartHandler,
       removeItem: removeItemFromCartHandler,
